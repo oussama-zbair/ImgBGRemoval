@@ -1,0 +1,139 @@
+/* Add styles for the progress bar and responsive design */
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.header p {
+    font-size: 16px;
+    color: #666;
+}
+
+.sample-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 10px;
+}
+
+.upload-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.upload-section .file-upload-label {
+    background-color: #007aff;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.upload-section input[type=file] {
+    display: none;
+}
+
+.upload-section .btn {
+    background-color: #4cd964;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.result-section {
+    margin-bottom: 20px;
+}
+
+.result-section h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.processed-image-container {
+    position: relative;
+}
+
+.processed-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: #007aff;
+    color: #fff;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.download-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Progress bar */
+.progress-bar-container {
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+
+.progress-bar {
+    width: 0%; /* Initial width */
+    height: 10px;
+    background-color: #007bff;
+    border-radius: 5px;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.progress-bar span {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Responsive design */
+@media only screen and (max-width: 600px) {
+    .container {
+        max-width: 90%;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Background</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Remove Background</h1>
+            <p>Upload your image to remove the background</p>
+        </div>
+        <img src="{{ url_for('static', filename='index.jpg') }}" alt="Sample Image" class="sample-image">
+        <div class="upload-section">
+            <form action="/" method="post" enctype="multipart/form-data">
+                <label for="fileInput" class="file-upload-label">Choose Image</label>
+                <input type="file" id="fileInput" name="file" accept="image/*" required>
+                <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+            <!-- Progress bar -->
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="progressBar">
+                    <span id="progressText">0%</span>
+                </div>
+            </div>
+            <!-- File info -->
+            <div id="fileInfo"></div>
+            <!-- Selected file name/message -->
+            <div id="selectedFileName" style="margin-top: 10px; color: #007aff; font-size: 16px;"></div>
+        </div>
+        <div class="result-section" style="display: none;">
+            <h2>Original Image</h2>
+            <img id="originalImage" alt="Uploaded Image" class="result-image">
+            <h2>Processed Image</h2>
+            <div class="processed-image-container">
+                <img id="processedImage" alt="Processed Image" class="processed-image">
+                <a id="downloadLink" class="btn btn-primary download-btn" style="display: none;">Download</a>
+            </div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
