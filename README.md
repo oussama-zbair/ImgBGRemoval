@@ -50,7 +50,7 @@ ImgBGRemoval is a Flask-based web application designed to simplify background re
 
 ## How It Works
 
-The application uses the U2Net deep learning model to perform precise image segmentation for background removal. Here's a brief overview of the process:
+The application uses the [U2Net](https://github.com/xuebinqin/U-2-Net "U2Net") deep learning model to perform precise image segmentation for background removal. Here's a brief overview of the process:
 
 1. **Image Upload**: Users upload an image to the web application.
    
