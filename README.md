@@ -2,10 +2,6 @@
 
 [![Build Status](https://travis-ci.com/oussama-zbair/ImgBGRemoval.svg?branch=master)](https://travis-ci.com/oussama-zbair/ImgBGRemoval)
 [![License](https://img.shields.io/github/license/oussama-zbair/ImgBGRemoval.svg?style=flat-square)](https://github.com/oussama-zbair/ImgBGRemoval/blob/master/LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/oussama-zbair/ImgBGRemoval.svg?style=flat-square)](https://github.com/oussama-zbair/ImgBGRemoval/issues)
-[![GitHub stars](https://img.shields.io/github/stars/oussama-zbair/ImgBGRemoval.svg?style=flat-square)](https://github.com/oussama-zbair/ImgBGRemoval/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/oussama-zbair/ImgBGRemoval.svg?style=flat-square)](https://github.com/oussama-zbair/ImgBGRemoval/network)
-[![GitHub contributors](https://img.shields.io/github/contributors/oussama-zbair/ImgBGRemoval.svg?style=flat-square)](https://github.com/oussama-zbair/ImgBGRemoval/graphs/contributors)
 [![GitHub last commit](https://img.shields.io/github/last-commit/oussama-zbair/ImgBGRemoval.svg?style=flat-square)](https://github.com/oussama-zbair/ImgBGRemoval/commits/master)
 [![Python Version](https://img.shields.io/badge/python-3.7%20%7C%203.8-blue.svg?style=flat-square)](https://www.python.org/downloads/)
 [![Flask Version](https://img.shields.io/badge/flask-2.0-green.svg?style=flat-square)](https://flask.palletsprojects.com/en/2.0.x/)
