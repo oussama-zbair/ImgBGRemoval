@@ -1,7 +1,19 @@
 # ImgBGRemoval
 
-ImgBGRemoval is a Flask-based web application designed to simplify background removal from images. With just a few clicks, users can upload images and effortlessly remove backgrounds.
+[![Build Status](https://img.shields.io/travis/your-username/ImgBGRemoval/master.svg?style=flat-square)](https://travis-ci.org/your-username/ImgBGRemoval)
+[![License](https://img.shields.io/github/license/your-username/ImgBGRemoval.svg?style=flat-square)](https://github.com/your-username/ImgBGRemoval/blob/master/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/your-username/ImgBGRemoval.svg?style=flat-square)](https://github.com/your-username/ImgBGRemoval/issues)
+[![GitHub stars](https://img.shields.io/github/stars/your-username/ImgBGRemoval.svg?style=flat-square)](https://github.com/your-username/ImgBGRemoval/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/your-username/ImgBGRemoval.svg?style=flat-square)](https://github.com/your-username/ImgBGRemoval/network)
+[![GitHub contributors](https://img.shields.io/github/contributors/your-username/ImgBGRemoval.svg?style=flat-square)](https://github.com/your-username/ImgBGRemoval/graphs/contributors)
+[![Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Fyour-username%2FImgBGRemoval.svg?style=flat-square)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fyour-username%2FImgBGRemoval)
+[![GitHub last commit](https://img.shields.io/github/last-commit/your-username/ImgBGRemoval.svg?style=flat-square)](https://github.com/your-username/ImgBGRemoval/commits/master)
+[![Python Version](https://img.shields.io/badge/python-3.7%20%7C%203.8-blue.svg?style=flat-square)](https://www.python.org/downloads/)
+[![Flask Version](https://img.shields.io/badge/flask-2.0-green.svg?style=flat-square)](https://flask.palletsprojects.com/en/2.0.x/)
+[![U2Net Model](https://img.shields.io/badge/U2Net-Deep%20Learning-orange.svg?style=flat-square)](https://github.com/xuebinqin/U-2-Net)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/your-netlify-site-id/status.svg?style=flat-square)](https://app.netlify.com/sites/your-netlify-site-id)
 
+ImgBGRemoval is a Flask-based web application designed to simplify background removal from images. With just a few clicks, users can upload images and effortlessly remove backgrounds.
 
 ## Features
 
@@ -66,4 +78,4 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
