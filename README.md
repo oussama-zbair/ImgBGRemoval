@@ -1,6 +1,5 @@
 # ImgBGRemoval
 
-[![Build Status](https://travis-ci.com/oussama-zbair/ImgBGRemoval.svg?branch=master)](https://travis-ci.com/oussama-zbair/ImgBGRemoval)
 [![License](https://img.shields.io/github/license/oussama-zbair/ImgBGRemoval.svg?style=flat-square)](https://github.com/oussama-zbair/ImgBGRemoval/blob/master/LICENSE)
 [![GitHub last commit](https://img.shields.io/github/last-commit/oussama-zbair/ImgBGRemoval.svg?style=flat-square)](https://github.com/oussama-zbair/ImgBGRemoval/commits/master)
 [![Python Version](https://img.shields.io/badge/python-3.7%20%7C%203.8-blue.svg?style=flat-square)](https://www.python.org/downloads/)
@@ -46,17 +45,18 @@ ImgBGRemoval is a Flask-based web application designed to simplify background re
 
 ## Screenshots
 
+[![Home Page](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/1.PNG)](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/1.PNG)
 
-[![Home Page](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/1.PNG "Home Page")](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/1.PNG "Home Page")
+[![Upload Image](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/2.PNG)](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/2.PNG)
 
-[![Upload Image](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/2.PNG "Home Page")](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/2.PNG "Home Page")
-
-[![Processed Image](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/3.PNG "Home Page")](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/3.PNG "Home Page")
+[![Processed Image](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/3.PNG)](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/3.PNG)
 
 
-[![Upload Image](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/4.PNG "Home Page")](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/2.PNG "Home Page")
+[![Upload Image](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/4.PNG)](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/4.PNG)
 
-[![Processed Image](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/5.PNG "Home Page")](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/3.PNG "Home Page")
+[![Processed Image](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/5.PNG)](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/5.PNG)
+
+
 
 ## How It Works
 
