@@ -50,10 +50,8 @@ ImgBGRemoval is a Flask-based web application designed to simplify background re
 ## Screenshots
 
 [![Home Page](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/1.PNG)](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/1.PNG)
-[![Upload Image](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/2.PNG)](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/2.PNG)
-[![Processed Image](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/3.PNG)](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/3.PNG)
-[![Upload Image](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/4.PNG)](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/4.PNG)
-[![Processed Image](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/5.PNG)](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/5.PNG)
+
+[![Upload Image](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/2.PNG)](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/2.PNG) [![Processed Image](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/3.PNG)](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/3.PNG) [![Upload Image](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/4.PNG)](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/4.PNG) [![Processed Image](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/5.PNG)](https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/5.PNG)
 
 ## How It Works
 
