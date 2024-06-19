@@ -43,7 +43,6 @@ ImgBGRemoval is a Flask-based web application designed to simplify background re
     flask run
     ```
 
-## Screenshots
 
 ## Screenshots
 
