@@ -1,12 +1,33 @@
 # ImgBGRemoval
 
-[![License](https://img.shields.io/github/license/oussama-zbair/ImgBGRemoval.svg?style=flat-square)](https://github.com/oussama-zbair/ImgBGRemoval/blob/master/LICENSE)
-[![GitHub last commit](https://img.shields.io/github/last-commit/oussama-zbair/ImgBGRemoval.svg?style=flat-square)](https://github.com/oussama-zbair/ImgBGRemoval/commits/master)
-[![Python Version](https://img.shields.io/badge/python-3.7%20%7C%203.8-blue.svg?style=flat-square)](https://www.python.org/downloads/)
-[![Flask Version](https://img.shields.io/badge/flask-2.0-green.svg?style=flat-square)](https://flask.palletsprojects.com/en/2.0.x/)
-[![U2Net Model](https://img.shields.io/badge/U2Net-Deep%20Learning-orange.svg?style=flat-square)](https://github.com/xuebinqin/U-2-Net)
+<p align="center">
+  <img src="https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/logo.png" alt="ImgBGRemoval Logo" width="200">
+</p>
 
-ImgBGRemoval is a Flask-based web application designed to simplify background removal from images. With just a few clicks, users can upload images and effortlessly remove backgrounds.
+<p align="center">
+  <a href="https://github.com/oussama-zbair/ImgBGRemoval/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/oussama-zbair/ImgBGRemoval.svg?style=for-the-badge" alt="License">
+  </a>
+  <a href="https://github.com/oussama-zbair/ImgBGRemoval/commits/master">
+    <img src="https://img.shields.io/github/last-commit/oussama-zbair/ImgBGRemoval.svg?style=for-the-badge" alt="GitHub last commit">
+  </a>
+  <a href="https://www.python.org/downloads/">
+    <img src="https://img.shields.io/badge/python-3.7%20%7C%203.8-blue.svg?style=for-the-badge" alt="Python Version">
+  </a>
+  <a href="https://flask.palletsprojects.com/en/2.0.x/">
+    <img src="https://img.shields.io/badge/flask-2.0-green.svg?style=for-the-badge" alt="Flask Version">
+  </a>
+  <a href="https://github.com/xuebinqin/U-2-Net">
+    <img src="https://img.shields.io/badge/U2Net-Deep%20Learning-orange.svg?style=for-the-badge" alt="U2Net Model">
+  </a>
+  <a href="https://github.com/oussama-zbair/ImgBGRemoval/actions">
+    <img src="https://img.shields.io/github/actions/workflow/status/oussama-zbair/ImgBGRemoval/ci.yml?style=for-the-badge" alt="CI Status">
+  </a>
+</p>
+
+<p align="center">
+  <strong>ImgBGRemoval</strong> is a Flask-based web application designed to simplify background removal from images. With just a few clicks, users can upload images and effortlessly remove backgrounds.
+</p>
 
 ## Features
 
@@ -46,6 +67,26 @@ ImgBGRemoval is a Flask-based web application designed to simplify background re
     ```bash
     flask run
     ```
+
+## Screenshots
+
+<p align="center">
+  <a href="https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/1.PNG">
+    <img src="https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/1.PNG" alt="Home Page" width="200">
+  </a>
+  <a href="https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/2.PNG">
+    <img src="https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/2.PNG" alt="Upload Image" width="200">
+  </a>
+  <a href="https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/3.PNG">
+    <img src="https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/3.PNG" alt="Processed Image" width="200">
+  </a>
+  <a href="https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/4.PNG">
+    <img src="https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/4.PNG" alt="Upload Image" width="200">
+  </a>
+  <a href="https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/5.PNG">
+    <img src="https://github.com/oussama-zbair/ImgBGRemoval/blob/main/static/screenshots/5.PNG" alt="Processed Image" width="200">
+  </a>
+</p>
 
 ## How It Works
 
