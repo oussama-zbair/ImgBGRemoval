@@ -1,0 +1,22 @@
+{
+    "remove_background": "Supprimer l'arrière-plan",
+    "upload_image": "Téléchargez votre image pour supprimer l'arrière-plan",
+    "original_image": "Image Originale",
+    "processed_image": "Image Traitée",
+    "documentation": "Documentation",
+    "documentation_description": "Cette application web vous permet de supprimer facilement l'arrière-plan des images. Téléchargez simplement une image et notre modèle avancé la traitera pour supprimer l'arrière-plan. Vous pouvez ensuite télécharger l'image traitée.",
+    "technologies_used": "Technologies Utilisées",
+    "get_started": "Commencer",
+    "get_started_description": "Suivez ces étapes pour commencer :",
+    "upload_format": "Téléchargez des images au format JPG ou PNG.",
+    "wait_for_progress": "Attendez que la barre de progression soit terminée.",
+    "download_image": "Téléchargez l'image traitée avec un arrière-plan transparent.",
+    "how_to_use": "Comment Utiliser l'Application Web",
+    "step_by_step_guide": "Voici un guide étape par étape pour utiliser l'application web :",
+    "choose_image": "Cliquez sur le bouton \"Choisir une Image\" pour télécharger votre fichier image.",
+    "wait_for_progress_complete": "Attendez que la barre de progression atteigne 100%, indiquant que le processus de suppression de l'arrière-plan est terminé.",
+    "view_images": "Une fois le processus terminé, vous verrez l'image originale et l'image traitée.",
+    "click_download": "Cliquez sur le bouton \"Télécharger\" pour enregistrer l'image traitée avec un arrière-plan transparent.",
+    "tutorials": "Tutoriels et Guides",
+    "tutorials_description": "Regardez les tutoriels et lisez les guides pour comprendre comment utiliser efficacement toutes les fonctionnalités de l'application web."
+}

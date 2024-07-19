@@ -4,43 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Remove Background</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/dist/tippy-bundle.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tippy.js@6.3.7/dist/tippy.css">
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>Remove Background</h1>
-            <p>Upload your image to remove the background</p>
-        </div>
-        <img src="{{ url_for('static', filename='index.jpg') }}" alt="Sample Image" class="sample-image">
-        <div class="upload-section">
-            <form action="/" method="post" enctype="multipart/form-data">
-                <label for="fileInput" class="file-upload-label">Choose Image</label>
-                <input type="file" id="fileInput" name="file" accept="image/*" required>
-                <button type="submit" class="btn btn-primary">Upload</button>
-            </form>
-            <!-- Progress bar -->
-            <div class="progress-bar-container">
-                <div class="progress-bar" id="progressBar">
-                    <span id="progressText">0%</span>
+<body class="bg-gray-900 text-gray-100 font-roboto transition-colors duration-300">
+    <header class="bg-gray-800 text-white py-4 shadow-md animate__animated animate__fadeInDown">
+        <nav class="container mx-auto flex justify-between items-center">
+            <div class="flex space-x-4">
+                <a href="#home" class="hover:underline">Home</a>
+                <a href="#documentation" class="hover:underline">Documentation</a>
+                <a href="#tutorials" class="hover:underline">Tutorials</a>
+                <a href="https://github.com/oussama-zbair/ImgBGRemoval" target="_blank" class="hover:underline flex items-center" data-tippy-content="View the GitHub repository">
+                    <i class="fab fa-github mr-2"></i>GitHub Repo
+                </a>
+            </div>
+            <div>
+                <select id="languageSelect" class="bg-gray-700 text-white rounded px-3 py-1">
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                    <option value="es">Spanish</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+    <section id="home" class="py-8 animate__animated animate__fadeIn">
+        <div class="container mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
+            <div class="text-center mb-6">
+                <h1 class="text-3xl font-bold" data-i18n="remove_background">Remove Background</h1>
+                <p data-i18n="upload_image">Upload your image to remove the background</p>
+            </div>
+            <img id="preview" src="{{ url_for('static', filename='index.jpg') }}" alt="Sample Image" class="w-full max-w-sm mx-auto mb-6 rounded-lg">
+            <div class="text-center">
+                <form action="/" method="post" enctype="multipart/form-data" class="space-y-4">
+                    <label for="fileInput" class="file-upload-label bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded cursor-pointer animate__animated animate__bounceIn" data-tippy-content="Click to choose an image file">Choose Image</label>
+                    <input type="file" id="fileInput" name="file" accept="image/*" required class="hidden">
+                    <button type="submit" class="btn btn-primary bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded animate__animated animate__pulse" data-tippy-content="Click to upload the chosen image">Upload</button>
+                </form>
+                <!-- Progress bar -->
+                <div class="progress-bar-container mt-4 animate__animated animate__slideInUp">
+                    <div class="progress-bar bg-blue-600 h-2 rounded" id="progressBar"></div>
+                    <span id="progressText" class="text-sm mt-2 block text-center">0%</span>
+                </div>
+                <!-- Loading spinner -->
+                <div id="loadingSpinner" class="mt-4" style="display: none;">
+                    <i class="fas fa-spinner fa-spin text-4xl"></i>
+                </div>
+                <!-- File info -->
+                <div id="fileInfo" class="mt-4 text-sm"></div>
+                <!-- Selected file name/message -->
+                <div id="selectedFileName" class="mt-2 text-sm text-blue-600"></div>
+                <!-- Alert -->
+                <div id="alertMessage" class="mt-4 hidden p-4 rounded-lg"></div>
+            </div>
+            <div class="result-section mt-8" style="display: none;">
+                <h2 class="text-2xl font-semibold mb-4" data-i18n="original_image">Original Image</h2>
+                <img id="originalImage" alt="Uploaded Image" class="w-full max-w-sm mx-auto mb-6 rounded-lg animate__animated animate__zoomIn">
+                <h2 class="text-2xl font-semibold mb-4" data-i18n="processed_image">Processed Image</h2>
+                <div class="processed-image-container">
+                    <img id="processedImage" alt="Processed Image" class="w-full max-w-sm mx-auto mb-4 rounded-lg animate__animated animate__zoomIn">
+                    <a id="downloadLink" class="btn btn-primary bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded animate__animated animate__fadeIn" style="display: none;" data-tippy-content="Click to download the processed image">Download</a>
                 </div>
             </div>
-            <!-- File info -->
-            <div id="fileInfo"></div>
-            <!-- Selected file name/message -->
-            <div id="selectedFileName" style="margin-top: 10px; color: #007aff; font-size: 16px;"></div>
         </div>
-        <div class="result-section" style="display: none;">
-            <h2>Original Image</h2>
-            <img id="originalImage" alt="Uploaded Image" class="result-image">
-            <h2>Processed Image</h2>
-            <div class="processed-image-container">
-                <img id="processedImage" alt="Processed Image" class="processed-image">
-                <a id="downloadLink" class="btn btn-primary download-btn" style="display: none;">Download</a>
+    </section>
+    <section id="documentation" class="py-8 animate__animated animate__fadeInUp">
+        <div class="container mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold mb-4" data-i18n="documentation">Documentation</h2>
+            <p class="mb-4" data-i18n="documentation_description">This web application allows you to remove the background from images with ease. Simply upload an image, and our advanced model will process it to remove the background. You can then download the processed image.</p>
+            <h3 class="text-2xl font-semibold mb-4" data-i18n="technologies_used">Technologies Used</h3>
+            <ul class="list-disc list-inside space-y-2">
+                <li><i class="fas fa-code"></i> Flask</li>
+                <li><i class="fas fa-database"></i> OpenCV</li>
+                <li><i class="fas fa-image"></i> Pillow</li>
+                <li><i class="fas fa-brain"></i> PyTorch</li>
+                <li><i class="fas fa-paint-brush"></i> Tailwind CSS</li>
+            </ul>
+            <h3 class="text-2xl font-semibold mt-6 mb-4" data-i18n="get_started">Get Started</h3>
+            <p class="mb-4" data-i18n="get_started_description">Follow these steps to get started:</p>
+            <ul class="list-disc list-inside space-y-2">
+                <li><i class="fas fa-upload"></i> <span data-i18n="upload_format">Upload images in JPG or PNG format.</span></li>
+                <li><i class="fas fa-spinner"></i> <span data-i18n="wait_for_progress">Wait for the progress bar to complete.</span></li>
+                <li><i class="fas fa-download"></i> <span data-i18n="download_image">Download the processed image with a transparent background.</li>
+            </ul>
+            <h3 class="text-2xl font-semibold mt-6 mb-4" data-i18n="how_to_use">How to Use the Web App</h3>
+            <p class="mb-4" data-i18n="step_by_step_guide">Here is a step-by-step guide to using the web app:</p>
+            <ol class="list-decimal list-inside space-y-2">
+                <li data-i18n="choose_image">Click on the "Choose Image" button to upload your image file.</li>
+                <li data-i18n="wait_for_progress_complete">Wait for the progress bar to reach 100%, indicating that the background removal process is complete.</li>
+                <li data-i18n="view_images">Once the process is finished, you will see the original image and the processed image.</li>
+                <li data-i18n="click_download">Click on the "Download" button to save the processed image with a transparent background.</li>
+            </ol>
+        </div>
+    </section>
+    <section id="tutorials" class="py-8 animate__animated animate__fadeInUp">
+        <div class="container mx-auto bg-gray-800 p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-bold mb-4" data-i18n="tutorials">Tutorials and Guides</h2>
+            <p class="mb-4" data-i18n="tutorials_description">Watch the tutorials and read the guides to understand how to use all the features of the web app effectively.</p>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/tutorial_video_id" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="guide-links mt-4">
+                <a href="guide1.pdf" target="_blank" class="text-blue-500 hover:underline" data-i18n="guide1">Guide 1: Getting Started</a><br>
+                <a href="guide2.pdf" target="_blank" class="text-blue-500 hover:underline" data-i18n="guide2">Guide 2: Advanced Features</a>
             </div>
         </div>
-    </div>
+    </section>
+    <footer class="bg-gray-800 text-white py-4 animate__animated animate__fadeInUp">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2023 Oussama Zbair. All rights reserved.</p>
+            <div class="mt-4">
+                <a href="https://github.com/oussama-zbair/ImgBGRemoval" target="_blank" class="hover:underline flex items-center justify-center" data-tippy-content="View the GitHub repository">
+                    <i class="fab fa-github mr-2"></i>GitHub Repo
+                </a>
+            </div>
+        </div>
+    </footer>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

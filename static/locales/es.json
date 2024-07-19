@@ -1,0 +1,22 @@
+{
+    "remove_background": "Eliminar Fondo",
+    "upload_image": "Sube tu imagen para eliminar el fondo",
+    "original_image": "Imagen Original",
+    "processed_image": "Imagen Procesada",
+    "documentation": "Documentación",
+    "documentation_description": "Esta aplicación web te permite eliminar el fondo de las imágenes fácilmente. Simplemente sube una imagen y nuestro modelo avanzado la procesará para eliminar el fondo. Luego, puedes descargar la imagen procesada.",
+    "technologies_used": "Tecnologías Utilizadas",
+    "get_started": "Empezar",
+    "get_started_description": "Sigue estos pasos para empezar:",
+    "upload_format": "Sube imágenes en formato JPG o PNG.",
+    "wait_for_progress": "Espera a que la barra de progreso se complete.",
+    "download_image": "Descarga la imagen procesada con un fondo transparente.",
+    "how_to_use": "Cómo Usar la Aplicación Web",
+    "step_by_step_guide": "Aquí tienes una guía paso a paso para usar la aplicación web:",
+    "choose_image": "Haz clic en el botón \"Elegir Imagen\" para subir tu archivo de imagen.",
+    "wait_for_progress_complete": "Espera a que la barra de progreso alcance el 100%, indicando que el proceso de eliminación del fondo se ha completado.",
+    "view_images": "Una vez que el proceso haya terminado, verás la imagen original y la imagen procesada.",
+    "click_download": "Haz clic en el botón \"Descargar\" para guardar la imagen procesada con un fondo transparente.",
+    "tutorials": "Tutoriales y Guías",
+    "tutorials_description": "Mira los tutoriales y lee las guías para entender cómo usar todas las características de la aplicación web de manera efectiva."
+}

@@ -43,6 +43,9 @@ $(document).ready(function() {
         var progressText = $('#progressText');
         var formData = new FormData($(this)[0]);
 
+        // Show loading spinner
+        $('#loadingSpinner').show();
+
         $.ajax({
             url: '/',
             type: 'POST',
@@ -53,23 +56,44 @@ $(document).ready(function() {
                 xhr.upload.addEventListener('progress', function(e) {
                     if (e.lengthComputable) {
                         var percent = Math.round((e.loaded / e.total) * 100);
-                        progressBar.css('width', percent + '%');
-                        progressText.text(percent + '%');
+                        var duration = 5000; // Minimum duration of 5 seconds
+                        var startTime = Date.now();
+                        var updateProgress = function() {
+                            var elapsed = Date.now() - startTime;
+                            var elapsedPercent = Math.min(100, (elapsed / duration) * 100);
+                            var displayPercent = Math.max(percent, elapsedPercent);
+                            progressBar.css('width', displayPercent + '%');
+                            progressText.text(Math.round(displayPercent) + '%');
+                            if (displayPercent < 100) {
+                                requestAnimationFrame(updateProgress);
+                            }
+                        };
+                        requestAnimationFrame(updateProgress);
                     }
                 }, false);
                 return xhr;
             },
             success: function(data) {
+                // Hide loading spinner
+                $('#loadingSpinner').hide();
                 // Reset progress bar after successful upload
                 progressBar.css('width', '0%');
                 progressText.text('0%');
+                // Show success alert
+                showAlert('Image processed successfully!', 'bg-green-500');
                 // Update the images and download link based on the server response
                 if (data.filename && data.result_filename) {
                     $('#originalImage').attr('src', data.upload_url + data.filename);
                     $('#processedImage').attr('src', data.upload_url + data.result_filename);
                     $('#downloadLink').attr('href', data.download_url + data.result_filename).show();
-                    $('.result-section').show();
+                    $('.result-section').show().addClass('animate__animated animate__fadeIn');
                 }
+            },
+            error: function() {
+                // Hide loading spinner
+                $('#loadingSpinner').hide();
+                // Show error alert
+                showAlert('Error processing image. Please try again.', 'bg-red-500');
             },
             cache: false,
             contentType: false,
@@ -77,6 +101,31 @@ $(document).ready(function() {
         });
         return false;
     });
+
+    // Function to show alerts
+    function showAlert(message, alertClass) {
+        var alertMessage = $('#alertMessage');
+        alertMessage.removeClass().addClass(`mt-4 p-4 rounded-lg ${alertClass}`).text(message).show();
+        setTimeout(function() {
+            alertMessage.fadeOut();
+        }, 5000);
+    }
+
+    // Initialize tooltips
+    tippy('[data-tippy-content]', {
+        placement: 'bottom',
+        animation: 'fade',
+        theme: 'dark'
+    });
+
+    // Language change
+    $('#languageSelect').change(function() {
+        var selectedLanguage = $(this).val();
+        changeLanguage(selectedLanguage);
+    });
+
+    // Load default language
+    changeLanguage('en');
 
     // Prevent form submission on Enter key press
     $(document).on('keypress', function(e) {
@@ -86,3 +135,12 @@ $(document).ready(function() {
         }
     });
 });
+
+function changeLanguage(language) {
+    $.getJSON(`/static/locales/${language}.json`, function(data) {
+        $('[data-i18n]').each(function() {
+            var key = $(this).attr('data-i18n');
+            $(this).text(data[key]);
+        });
+    });
+}

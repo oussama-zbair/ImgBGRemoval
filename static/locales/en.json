@@ -1,0 +1,22 @@
+{
+    "remove_background": "Remove Background",
+    "upload_image": "Upload your image to remove the background",
+    "original_image": "Original Image",
+    "processed_image": "Processed Image",
+    "documentation": "Documentation",
+    "documentation_description": "This web application allows you to remove the background from images with ease. Simply upload an image, and our advanced model will process it to remove the background. You can then download the processed image.",
+    "technologies_used": "Technologies Used",
+    "get_started": "Get Started",
+    "get_started_description": "Follow these steps to get started:",
+    "upload_format": "Upload images in JPG or PNG format.",
+    "wait_for_progress": "Wait for the progress bar to complete.",
+    "download_image": "Download the processed image with a transparent background.",
+    "how_to_use": "How to Use the Web App",
+    "step_by_step_guide": "Here is a step-by-step guide to using the web app:",
+    "choose_image": "Click on the \"Choose Image\" button to upload your image file.",
+    "wait_for_progress_complete": "Wait for the progress bar to reach 100%, indicating that the background removal process is complete.",
+    "view_images": "Once the process is finished, you will see the original image and the processed image.",
+    "click_download": "Click on the \"Download\" button to save the processed image with a transparent background.",
+    "tutorials": "Tutorials and Guides",
+    "tutorials_description": "Watch the tutorials and read the guides to understand how to use all the features of the web app effectively."
+}

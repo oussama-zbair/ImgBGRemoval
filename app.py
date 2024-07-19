@@ -35,18 +35,17 @@ def postprocess_mask(mask, original_size):
 
 
 def remove_background(image_path):
-    image = Image.open(image_path).convert('RGBA')  # Open image and convert to RGBA
+    image = Image.open(image_path).convert('RGBA')
     original_size = image.size
     input_tensor = preprocess_image(image_path)
 
     with torch.no_grad():
-        d1, _, _, _, _, _, _ = net(input_tensor)  # Assuming U2NET returns a tuple with multiple outputs
+        d1, _, _, _, _, _, _ = net(input_tensor)
         mask = d1[:, 0, :, :]
         mask = postprocess_mask(mask, original_size)
 
     image_np = array(image)
 
-    # Create a transparent background where the mask is zero
     image_np[:, :, 3] = mask * 255
 
     result_image = Image.fromarray(image_np, 'RGBA')
@@ -56,7 +55,7 @@ def remove_background(image_path):
 
 def generate_filename():
     global filename_counter
-    filename = f'image_processed_{filename_counter}.png'  # Save as PNG to support transparency
+    filename = f'image_processed_{filename_counter}.png'
     filename_counter += 1
     return filename
 
@@ -83,7 +82,7 @@ def upload_file():
                 'filename': filename,
                 'result_filename': result_filename,
                 'upload_url': url_for('static', filename='uploads/') + '/',
-                'download_url': url_for('download_file', filename='') + '/'
+                'download_url': url_for('download_file', filename=result_filename)
             })
     return render_template('index.html')
 
