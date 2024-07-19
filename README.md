@@ -19,7 +19,7 @@ ImgBGRemoval is a Flask-based web application designed to simplify background re
 - **Backend**: Python, Flask
 - **Deep Learning Model**: U2Net
 - **Libraries**: OpenCV, PIL (Python Imaging Library), PyTorch (for deep learning)
-- **Deployment**: Netlify (frontend), Flask server (backend)
+- **Deployment**: Heroku, Flask server (backend)
 
 ## Setup
 
