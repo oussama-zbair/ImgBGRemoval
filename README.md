@@ -1,5 +1,4 @@
 # ImgBGRemoval
-[![Netlify Status](https://api.netlify.com/api/v1/badges/b98b519e-034f-49d8-8692-74498cb853a7/deploy-status)](https://app.netlify.com/sites/rm-backgroud/deploys)
 [![License](https://img.shields.io/github/license/oussama-zbair/ImgBGRemoval.svg?style=flat-square)](https://github.com/oussama-zbair/ImgBGRemoval/blob/master/LICENSE)
 [![GitHub last commit](https://img.shields.io/github/last-commit/oussama-zbair/ImgBGRemoval.svg?style=flat-square)](https://github.com/oussama-zbair/ImgBGRemoval/commits/master)
 [![Python Version](https://img.shields.io/badge/python-3.7%20%7C%203.8-blue.svg?style=flat-square)](https://www.python.org/downloads/)
